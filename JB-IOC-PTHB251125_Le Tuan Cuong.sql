@@ -1,3 +1,5 @@
+CREATE DATABASE CSDL1;
+CREATE SCHEMA module1;
 set search_path to module1;
 --Tao bang
 CREATE TABLE Customers(
@@ -211,4 +213,5 @@ language plpgsql as $$
         VALUES(p_booking_id,p_payment_method, p_payment_date,p_payment_amount);
     end;
     $$;
+
 
