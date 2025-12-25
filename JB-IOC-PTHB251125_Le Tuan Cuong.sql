@@ -175,6 +175,7 @@ BEGIN
     UPDATE Room
     SET room_status = 'Booked'
     WHERE room_id = new.room_id;
+RETURN NEW;
 end;
 $$ language plpgsql;
 
@@ -213,5 +214,6 @@ language plpgsql as $$
         VALUES(p_booking_id,p_payment_method, p_payment_date,p_payment_amount);
     end;
     $$;
+
 
 
